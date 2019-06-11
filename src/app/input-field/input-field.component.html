@@ -1,0 +1,10 @@
+<label for="number">Input:</label>
+<input
+  id="number"
+  [(ngModel)]="number"
+  maxlength="9"
+  oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+/>
+<p>
+  Output:<span>{{ number | phoneNumber }}</span>
+</p>
